@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        mainViewModel =
+            ViewModelProvider(this, MainViewModelFactory(7)).get(MainViewModel::class.java)
 
         setText()
 
